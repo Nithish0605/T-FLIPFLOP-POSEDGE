@@ -1,5 +1,8 @@
 # T-FLIPFLOP-POSEDGE
 
+# DEVELOPED BY: NITHISH S
+# REGISTER NO: 2122242401045
+
 **AIM:**
 
 To implement  T flipflop using verilog and validating their functionality using their functional tables
@@ -28,15 +31,45 @@ From the above characteristic table, we can directly write the next state equati
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
+
+**TRUTH TABLE**
+
+![300544901-cdd7fb32-539f-4b66-bb8d-f305a153c886](https://github.com/user-attachments/assets/83d561f5-e355-4e8e-9212-7fb86ec93405)
+
 
 **PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```PYTHON
+  module T(q,qb,t,clock);
+  input t,clock;
+  output reg q;
+  output qb;
+  
+  always @ (posedge(clock))
+  begin
+  q<=(t^q);
+  end
+  assign qb=(~q);
+  endmodule
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![448025952-4ea2e7f7-1733-4900-9d27-8ab1d5484bdb](https://github.com/user-attachments/assets/a96a4e47-2ded-4258-9e39-03c18bbecff3)
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![448027067-228f5215-07bd-4e4c-bf60-7a475324a1de](https://github.com/user-attachments/assets/3ada042b-1dc9-4716-8f8d-bcfa917fb860)
+
+
 **RESULTS**
+RESULTS Thus the implemenetation of T flip flop has been verified using verilog code.
